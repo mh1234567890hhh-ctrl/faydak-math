@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101a30" />
+    <script>
+      try {
+        var savedTheme = JSON.parse(localStorage.getItem('mybook:theme'))
+        if (['light', 'dark', 'system'].indexOf(savedTheme) === -1) savedTheme = 'system'
+        document.documentElement.dataset.theme =
+          savedTheme === 'system'
+            ? window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light'
+            : savedTheme
+      } catch (error) {}
+    </script>
+    <meta
+      name="description"
+      content="فيديك ماث — متجر كتب الحساب الذهني والرياضيات المبسّطة للأطفال: سلسلة فيديك ماث وسلسلة قيم دكان، بتوصيل لكل محافظات مصر."
+    />
+    <title>فيديك ماث — كتب الحساب الذهني</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="فيديك ماث" />
+    <meta property="og:locale" content="ar_EG" />
+    <meta property="og:title" content="فيديك ماث — كتب الحساب الذهني والرياضيات للأطفال" />
+    <meta
+      property="og:description"
+      content="سلسلة فيديك ماث وسلسلة قيم دكان — كتب حساب ذهني ورياضيات مبسّطة للأطفال، بتوصيل لباب البيت في ٤٨ ساعة."
+    />
+    <meta property="og:image" content="/faydak-math/books/vedic-introduction.jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="فيديك ماث — كتب الحساب الذهني والرياضيات للأطفال" />
+    <meta
+      name="twitter:description"
+      content="سلسلة فيديك ماث وسلسلة قيم دكان — كتب حساب ذهني ورياضيات مبسّطة للأطفال، بتوصيل لباب البيت في ٤٨ ساعة."
+    />
+    <meta name="twitter:image" content="/faydak-math/books/vedic-introduction.jpeg" />
+    <link rel="icon" type="image/svg+xml" href="/faydak-math/mark.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/faydak-math/assets/index-BzOukDRO.js"></script>
+    <link rel="stylesheet" crossorigin href="/faydak-math/assets/index-gPkFsNpv.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
